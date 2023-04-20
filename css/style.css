@@ -99,18 +99,23 @@ body._lock {
 .wrapper {
   min-height: 100%;
   background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
 }
 
 .page {
   padding: 70px 0px 0px 0px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .page_section {
   max-width: 100%;
   margin: 0px auto;
   /* временное решение */
-  margin: -70px 0px 0px 0px;
-  padding: 70px 0px 0px 0px;
+  margin: -65px 0px 0px 0px;
+  padding: 65px 0px 0px 0px;
   /* временное решение */
 }
 
@@ -137,11 +142,22 @@ body._lock {
   text-align: center;
 }
 .page_section_1 .page_section_1__row .page_section_1__body .page_section_1__title {
-  padding: 0px 0px 30px 0px;
+  padding: 20px 0px 30px 0px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 .page_section_1 .page_section_1__row .page_section_1__body .page_section_1__text {
   background-color: rgba(0, 0, 0, 0.4);
+  padding: 0px 0px 20px 0px;
+}
+@media (max-width: 767px), (max-height: 500px) {
+  .page_section_1 .page_section_1__row .page_section_1__body .page_section_1__title {
+    padding: 5px 0px 15px 0px;
+    line-height: 1.2;
+  }
+  .page_section_1 .page_section_1__row .page_section_1__body .page_section_1__text {
+    padding: 0px 0px 5px 0px;
+    line-height: 1.2;
+  }
 }
 .page_section_1 .page_section_1__row .page_section_1__transfer {
   position: absolute;
@@ -218,6 +234,7 @@ body._lock {
   padding: 30px 30px 30px 30px;
   max-width: 1200px;
   margin: 0px auto;
+  flex: 1 1 auto;
 }
 
 .section_1__container {
@@ -245,6 +262,11 @@ body._lock {
   font-size: 40px;
   margin: 0px 0px 30px 0px;
   color: #000;
+}
+@media (max-width: 767px) {
+  .page_section_2__row .page_section_2__title {
+    font-size: 32px;
+  }
 }
 .page_section_2__row .page_section_2__body .page_section_2__part_1 {
   display: flex;
@@ -489,7 +511,7 @@ body._touch .menu__list > li._active .menu__arrow {
   background-color: #77608d;
   padding: 0px 20px;
   font-size: 18px;
-  margin: 0px 20px 20px 20px;
+  margin: 0px 20px 35px 20px;
   border-radius: 25px;
   box-shadow: 0px 6px 3px rgba(125, 7, 180, 0.5);
   -webkit-box-shadow: 0px 6px 3px rgba(125, 7, 180, 0.5);
@@ -621,6 +643,16 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #000;
   text-align: center;
 }
+@media (max-width: 992px) {
+  .page__row .page__title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .page__row .page__title {
+    font-size: 28px;
+  }
+}
 .page__row .page__body .page__item {
   margin: -15px 0px 30px 0px;
   padding: 15px 0px 0px 0px;
@@ -686,20 +718,50 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .page_and_sidebar .big_container .page_and_sidebar__row .sidebar {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 250px;
+  width: 300px;
   margin: 0px 30px 0px 0px;
   flex-shrink: 0;
 }
 .page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu {
-  position: -webkit-sticky;
   position: fixed;
-  top: 0;
+  top: 70px;
+  width: 300px;
+  bottom: 80px;
+  overflow: auto;
+  padding: 30px 30px 0px 30px;
+}
+.page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+.page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu::-webkit-scrollbar-track {
+  background-color: #32312e;
+  box-shadow: 0px 0px 3px #000 inset;
+}
+.page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #ffcb17;
+  box-shadow: 0px 1px 1px #fff inset;
+  background-image: url("https://yraaa.ru/_pu/24/59610063.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px;
+}
+.page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu::-webkit-scrollbar {
+  width: 11px;
 }
 .page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu .sidebar__list {
-  padding: 100px 0px 0px 30px;
+  line-height: 1.3;
 }
 .page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu .sidebar__list li {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 30px 0px;
 }
 .page_and_sidebar .big_container .page_and_sidebar__row .sidebar .sidebar__menu .sidebar__list .sidebar__link {
   color: #000;
